@@ -1,0 +1,29 @@
+package com.tejait.batch15.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import lombok.AllArgsConstructor;
+
+@RestController
+@RequestMapping("restTemplate")
+@AllArgsConstructor
+public class RestTemplateController {
+	
+	RestTemplate restTemplate;
+	
+	@GetMapping("getname")
+	public String getname() {
+		
+		String name="Teja IT";
+		
+		String  tagline=restTemplate.getForObject("http://localhost:8081/test/tagline", String.class);
+		
+		return name.concat(" "+ tagline);
+		
+		
+	}
+
+}
