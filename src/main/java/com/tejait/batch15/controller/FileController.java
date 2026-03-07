@@ -3,6 +3,7 @@ package com.tejait.batch15.controller;
 import java.io.IOException;
 
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -22,9 +23,10 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 @RequestMapping("file")
 public class FileController {
-	
-	
-	FileService service;
+
+
+
+    FileService service;
 	
 	@PostMapping("/upload")
 	

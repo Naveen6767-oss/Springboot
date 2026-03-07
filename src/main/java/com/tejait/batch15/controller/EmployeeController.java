@@ -220,7 +220,7 @@ public class EmployeeController {
                     	
                     List<String>	list1=service.findDistinctByDept();
                     
-                    return new ResponseEntity<List<String>>(list1, HttpStatus.OK);
+                    return new ResponseEntity<>(list1, HttpStatus.OK);
                     }
                    @GetMapping("search/{searchterm}")
                    public ResponseEntity<List<Employee>> searchdata(@PathVariable String searchterm){
@@ -228,7 +228,7 @@ public class EmployeeController {
                 	List<Employee> list = service.serchEmployee(searchterm);
                 	
                 	
-                	return new ResponseEntity<List<Employee>> (list, HttpStatus.OK);
+                	return new ResponseEntity<> (list, HttpStatus.OK);
                    }
                                    	   
                    

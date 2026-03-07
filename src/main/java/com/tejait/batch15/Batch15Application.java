@@ -11,8 +11,7 @@ public class Batch15Application {
 	
 	private static final Logger logger=LogManager.getLogger(Batch15Application.class);	
 	
-	
-		
+
 	public static void main(String[] args) {
 		
 		SpringApplication.run(Batch15Application.class, args);
